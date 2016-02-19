@@ -1,0 +1,10 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "ionic-native-transitions": "shprink/ionic-native-transitions#~1.0.0-rc9"
+  }
+}
