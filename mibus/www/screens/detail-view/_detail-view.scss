@@ -1,5 +1,5 @@
 .timeline {
-    // position: relative;
+    position: relative;
     // margin: 15px 0 0 0;
 }
 
@@ -8,26 +8,29 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 1px;
-    background: #5b5b5b;
-    left: 29px;
+    height: 100wh;
+    width: 2px;
+    background: #838383;
+    left: 28px;
     margin-left: -10px;
-    z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    z-index: 2;
 }
 
 .timeline .timeline-thumb {
     border-radius: 500px;
-    width: 15px;
+    width: 10px;
     z-index: 2;
     position: absolute;
-    left: 12px
+    left: 14px
 }
 
 .timeline .timeline-thumb.timeline-icon {
-    height: 15px;
+    height: 10px;
     text-align: center;
-    background: #373737;
-    line-height: 15px;
+    background: #555555;
+    line-height: 10px;
 }
 
 .timeline .timeline-item {
@@ -42,7 +45,7 @@
     color: #7F8C8D;
 }
 .stop-title{
-  line-height: 15px;
+  line-height: 10px;
   font-size: 1em;
   font-weight: 200;
   color: #282828;

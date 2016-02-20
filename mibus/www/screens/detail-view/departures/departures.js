@@ -1,15 +1,22 @@
 angular.module('mibus').controller("DeparturesViewController", function($scope, $state, $stateParams, $http, $ionicLoading, routeService) {
 
-  $scope.selectedRoute = routeService.getSelectedRoute();
+
+  $scope.$on('$ionicView.enter', function() {
+    $scope.selectedRoute = routeService.getSelectedRoute();
+
+    $ionicLoading.show({
+      template: "Loading..."
+    });
+
+    $scope.getRouteDepartures($scope.selectedRoute.id);
+  });
+
+
   $scope.routeStops = [];
   $scope.routeDepartures = [];
-
   $scope.isIOS = ionic.Platform.isIOS();
   $scope.isAndroid = ionic.Platform.isAndroid();
 
-  $ionicLoading.show({
-    template: "Loading..."
-  });
 
   $scope.getRouteDepartures = function(routeId) {
     routeService.getRouteDepartures(routeId)
@@ -23,9 +30,6 @@ angular.module('mibus').controller("DeparturesViewController", function($scope, 
           httpError.data;
       };
   };
-
-  $scope.getRouteDepartures($scope.selectedRoute.id);
-
 
   $scope.goBack = function(){
     $state.go('list-view');

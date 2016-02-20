@@ -23,6 +23,7 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
   };
 
   $scope.goToDetails = function(routeObj) {
+    console.log(routeObj);
     routeService.selectRoute(routeObj);
     $state.go('detail-view.stops');
   };
