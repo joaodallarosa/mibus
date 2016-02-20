@@ -12,7 +12,7 @@ angular.module('mibus').controller("DetailViewController", function($scope, $sta
     routeService.getRouteStops(routeId)
       .then(
         function(response) {
-          console.log(response);
+          $scope.routeStops = response.data['rows'];
         }),
       function(httpError) {
         throw httpError.status + " : " +
@@ -28,7 +28,7 @@ angular.module('mibus').controller("DetailViewController", function($scope, $sta
     routeService.getRouteDepartures(routeId)
       .then(
         function(response) {
-          console.log(response);
+          $scope.routeDepartures = response.data['rows'];
         }),
       function(httpError) {
         throw httpError.status + " : " +
