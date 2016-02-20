@@ -4,6 +4,9 @@ angular.module('mibus').controller("DeparturesViewController", function($scope, 
   $scope.routeStops = [];
   $scope.routeDepartures = [];
 
+  $scope.isIOS = ionic.Platform.isIOS();
+  $scope.isAndroid = ionic.Platform.isAndroid();
+
   $ionicLoading.show({
     template: "Loading..."
   });
@@ -23,5 +26,9 @@ angular.module('mibus').controller("DeparturesViewController", function($scope, 
 
   $scope.getRouteDepartures($scope.selectedRoute.id);
 
+
+  $scope.goBack = function(){
+    $state.go('list-view');
+  }
 
 });

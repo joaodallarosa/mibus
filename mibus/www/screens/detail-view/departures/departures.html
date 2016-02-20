@@ -1,4 +1,13 @@
+
 <ion-view title="{{selectedRoute.longName}}">
+
+  <ion-nav-buttons side="left">
+    <button class="button button-clear header-item" ng-click="goBack()">
+      <i class="icon ion-android-arrow-back" ng-if="isAndroid"></i>
+      <i class="icon ion-ios-arrow-back" ng-if="isIOS"> Back</i>
+    </button>
+  </ion-nav-buttons>
+
     <ion-content>
       <div class="item item-divider">
         Weekdays

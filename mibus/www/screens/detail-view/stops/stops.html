@@ -1,10 +1,19 @@
 <ion-view title="{{selectedRoute.longName}}">
-    <ion-content>
-      <ul class="timeline">
-        <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
-          <div class="timeline-thumb bg-color-blue timeline-icon"></div>
-          <p class="stop-title">{{routeStop.name}}</p>
-        </li>
-      </ul>
-    </ion-content>
+
+  <ion-nav-buttons side="left">
+    <button class="button button-clear header-item" ng-click="goBack()">
+      <i class="icon ion-android-arrow-back" ng-if="isAndroid"></i>
+      <i class="icon ion-ios-arrow-back" ng-if="isIOS">
+        Back</i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ul class="timeline">
+      <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
+        <div class="timeline-thumb bg-color-blue timeline-icon"></div>
+        <p class="stop-title">{{routeStop.name}}</p>
+      </li>
+    </ul>
+  </ion-content>
 </ion-view>
