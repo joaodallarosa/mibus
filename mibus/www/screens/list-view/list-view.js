@@ -1,18 +1,19 @@
 angular.module('mibus').controller("ListViewController", function($scope, $state, $stateParams, $http, $ionicLoading, routeService) {
 
   $scope.routes = [];
-  //
-  // $ionicLoading.show({
-  //   template: "Loading..."
-  // });
-
+  $scope.searchText = '';
 
   $scope.getRoutes = function(routeStop) {
     console.log('Route stop:', routeStop);
 
+    $ionicLoading.show({
+      template: "Loading..."
+    });
+
     routeService.searchRoute(routeStop)
       .then(
         function(response) {
+          $ionicLoading.hide();
           $scope.routes = response.data['rows'];
         }),
       function(httpError) {
@@ -21,7 +22,7 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
       };
   };
 
-  $scope.getRoutes('lauro linhares');
+
 
   // var authString = "WKD4N7YMA1uiM8V" + ":" + "DtdTtzMLQlA0hk2C1Yi5pLyVIlAQ68";
   // var encodedString = btoa(authString);
