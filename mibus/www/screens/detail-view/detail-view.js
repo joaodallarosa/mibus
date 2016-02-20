@@ -1,45 +1,42 @@
-angular.module('mibus').controller("DetailViewController", function($scope, $state, $stateParams, $http, $ionicLoading) {
+angular.module('mibus').controller("DetailViewController", function($scope, $state, $stateParams, $http, $ionicLoading, routeService) {
+
+
 
   $scope.routeId = $stateParams.routeId;
   $scope.routeTitle = $stateParams.routeTitle;
   $scope.routeStops = [];
   $scope.routeDepartures = [];
 
-  $ionicLoading.show({
-    template: "Loading..."
-  });
+  $scope.getRouteStops = function(routeId) {
 
-  var authString = "WKD4N7YMA1uiM8V" + ":" + "DtdTtzMLQlA0hk2C1Yi5pLyVIlAQ68";
-  var encodedString = btoa(authString);
+    routeService.getRouteStops(routeId)
+      .then(
+        function(response) {
+          console.log(response);
+        }),
+      function(httpError) {
+        throw httpError.status + " : " +
+          httpError.data;
+      };
+  };
 
-  var params = {
-    "params": {
-      "routeId": $scope.routeId
-    }
-  }
-
-  $http({
-      method: 'POST',
-      dataType: 'json',
-      url: 'https://api.appglu.com/v1/queries/findStopsByRouteId/run',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Basic ' + encodedString,
-        'X-AppGlu-Environment': 'staging'
-      },
-      data: params
-    })
-    .success(function(data, status) {
-      $ionicLoading.hide();
-      $scope.routeStops = data['rows'];
-      console.log("Data received: ", data);
-
-    }).error(function() {
-      console.log("Error while received data.");
-      $ionicLoading.hide();
-    });
+  $scope.getRouteStops($scope.routeId);
 
 
+  $scope.getRouteDepartures = function(routeId) {
+
+    routeService.getRouteDepartures(routeId)
+      .then(
+        function(response) {
+          console.log(response);
+        }),
+      function(httpError) {
+        throw httpError.status + " : " +
+          httpError.data;
+      };
+  };
+
+  $scope.getRouteDepartures($scope.routeId);
 
 
 });
