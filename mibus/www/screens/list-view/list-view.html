@@ -6,7 +6,7 @@
   <!-- <p>Oi john
   </p> -->
   <ion-list>
-    <ion-item ng-repeat="route in routes">
+    <ion-item ng-repeat="route in routes" ng-click="goToDetails(route.id, route.longName)">
       {{route.shortName}}
       -
       {{route.longName}}

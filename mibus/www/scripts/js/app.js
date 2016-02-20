@@ -24,9 +24,13 @@ angular.module('mibus', ['ionic'])
         controller: 'ListViewController'
       })
       .state('detail-view', {
-        url: "/users/:userId",
+        url: "/list-detail",
         templateUrl: "screens/detail-view/detail-view.html",
-        controller: "DetailViewController"
+        controller: "DetailViewController",
+        params: {
+          routeTitle: '',
+          routeId: 0
+        }
       });
     $urlRouterProvider.otherwise('/list-view');
   });

@@ -1,4 +1,4 @@
-angular.module('mibus').controller("ListViewController", function($scope, $stateParams, $http, $ionicLoading) {
+angular.module('mibus').controller("ListViewController", function($scope, $state, $stateParams, $http, $ionicLoading) {
 
   $scope.routes = [];
 
@@ -29,12 +29,19 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
     .success(function(data, status) {
       $ionicLoading.hide();
       $scope.routes = data['rows'];
+      console.log("Data received: ", data);
+
     }).error(function() {
       console.log("Error while received data.");
       $ionicLoading.hide();
     });
 
-
+  $scope.goToDetails = function(routeId, routeTitle) {
+    $state.go('detail-view', {
+      routeTitle: routeTitle,
+      routeId: routeId
+    });
+  };
 
 
 
