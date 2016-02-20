@@ -1,19 +1,17 @@
-<ion-header-bar class="bar-positive">
-  <h1 class="title">Mibus</h1>
-</ion-header-bar>
-<ion-content>
+<ion-view view-title="Mibus">
+  <ion-content>
+    <ion-list>
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchText" ng-change="getRoutes(searchText)">
+      </label>
 
-  <ion-list>
-    <label class="item item-input">
-      <i class="icon ion-search placeholder-icon"></i>
-      <input type="text" placeholder="Search" ng-model="searchText" ng-change="getRoutes(searchText)">
-    </label>
+      <ion-item ng-repeat="route in routes" ng-click="goToDetails(route.id, route.longName)">
+        {{route.shortName}}
+        -
+        {{route.longName}}
+      </ion-item>
+    </ion-list>
 
-    <ion-item ng-repeat="route in routes" ng-click="goToDetails(route.id, route.longName)">
-      {{route.shortName}}
-      -
-      {{route.longName}}
-    </ion-item>
-  </ion-list>
-
-</ion-content>
+  </ion-content>
+</ion-view>

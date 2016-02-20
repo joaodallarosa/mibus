@@ -1,47 +1,44 @@
-<ion-header-bar class="bar-stable">
-  <h1 class="title">{{routeTitle}}</h1>
-</ion-header-bar>
-<ion-content>
+<ion-view view-title="{{routeTitle}}">
+  <ion-content>
+    <div class="item item-divider">
+      Stops
+    </div>
+    <ul class="timeline">
+      <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
+        <div class="timeline-thumb bg-color-blue timeline-icon"></div>
+        <!-- <div> -->
+        <p class="stop-title">{{routeStop.name}}</p>
+        <!-- </div> -->
+      </li>
 
+    </ul>
 
-  <div class="item item-divider">
-    Stops
-  </div>
-  <ul class="timeline">
-    <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
-      <div class="timeline-thumb bg-color-blue timeline-icon"></div>
-      <!-- <div> -->
-      <p class="stop-title">{{routeStop.name}}</p>
-      <!-- </div> -->
-    </li>
+    <div class="item item-divider">
+      Weekdays
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'WEEKDAY'">
+        {{routeDeparture.time}}
+      </ion-item>
+    </ion-list>
 
-  </ul>
+    <div class="item item-divider">
+      Saturday
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SATURDAY'">
+        {{routeDeparture.time}}
+      </ion-item>
+    </ion-list>
 
-  <div class="item item-divider">
-    Weekdays
-  </div>
-  <ion-list>
-    <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'WEEKDAY'">
-      {{routeDeparture.time}}
-    </ion-item>
-  </ion-list>
+    <div class="item item-divider">
+      Sunday
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SUNDAY'">
+        {{routeDeparture.time}}
+      </ion-item>
+    </ion-list>
 
-  <div class="item item-divider">
-    Saturday
-  </div>
-  <ion-list>
-    <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SATURDAY'">
-      {{routeDeparture.time}}
-    </ion-item>
-  </ion-list>
-
-  <div class="item item-divider">
-    Sunday
-  </div>
-  <ion-list>
-    <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SUNDAY'">
-      {{routeDeparture.time}}
-    </ion-item>
-  </ion-list>
-
-</ion-content>
+  </ion-content>
+</ion-view>

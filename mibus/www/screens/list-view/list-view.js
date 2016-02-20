@@ -22,8 +22,6 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
       };
   };
 
-
-
   // var authString = "WKD4N7YMA1uiM8V" + ":" + "DtdTtzMLQlA0hk2C1Yi5pLyVIlAQ68";
   // var encodedString = btoa(authString);
   //
