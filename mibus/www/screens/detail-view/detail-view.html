@@ -3,18 +3,19 @@
 </ion-header-bar>
 <ion-content>
 
-  <div class="item item-divider">
-    Itinerary
-  </div>
-  <ion-list>
-    <ion-item ng-repeat="routeStop in routeStops" ng-click="">
-      {{routeStop.name}}
-    </ion-item>
-  </ion-list>
 
   <div class="item item-divider">
-    Departures
+    Stops
   </div>
+  <ul class="timeline">
+    <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
+      <div class="timeline-thumb bg-color-blue timeline-icon"></div>
+      <!-- <div> -->
+      <p class="stop-title">{{routeStop.name}}</p>
+      <!-- </div> -->
+    </li>
+
+  </ul>
 
   <div class="item item-divider">
     Weekdays
