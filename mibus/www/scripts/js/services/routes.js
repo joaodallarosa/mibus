@@ -4,7 +4,6 @@ angular.module('mibus').service('routeService', function($http) {
   var authString = username + ":" + password;
   var encodedString = btoa(authString);
 
-
   this.searchRoute = function(stopName) {
 
     var params = {
@@ -63,6 +62,15 @@ angular.module('mibus').service('routeService', function($http) {
       },
       data: params
     })
+  }
+
+  var selectedRoute = {};
+  this.getSelectedRoute = function(){
+    return selectedRoute;
+  }
+
+  this.selectRoute = function(routeObj){
+    selectedRoute = routeObj;
   }
 
 });

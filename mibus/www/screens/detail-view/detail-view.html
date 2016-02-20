@@ -1,7 +1,5 @@
-<!-- <ion-view view-title="{{routeTitle}}"> -->
-
 <ion-view>
-    <ion-tabs class="tabs-stable tabs-icon-top">
+    <ion-tabs class="tabs-positive tabs-icon-top">
         <ion-tab title="Stops" icon="ion-android-bus" ui-sref="detail-view.stops">
             <ion-nav-view name="stops"></ion-nav-view>
         </ion-tab>
@@ -10,59 +8,3 @@
         </ion-tab>
     </ion-tabs>
 </ion-view>
-
-<!-- <ion-tabs class="tabs-positive tabs-icon-top">
-
-  <ion-tab title="Stops" icon-on="ion-android-bus" icon-off="ion-android-bus">
-
-    <ion-view view-title="{{routeTitle}}">
-      <ion-content>
-        <div class="item item-divider">
-          Stops
-        </div>
-        <ul class="timeline">
-          <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
-            <div class="timeline-thumb bg-color-blue timeline-icon"></div>
-            <p class="stop-title">{{routeStop.name}}</p>
-          </li>
-
-        </ul>
-      </ion-content>
-    </ion-view>
-  </ion-tab>
-
-  <ion-tab title="Departures" icon-on="ion-android-time" icon-off="ion-android-time">
-    <ion-view view-title="{{routeTitle}}">
-      <ion-content>
-        <div class="item item-divider">
-          Weekdays
-        </div>
-        <ion-list>
-          <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'WEEKDAY'">
-            {{routeDeparture.time}}
-          </ion-item>
-        </ion-list>
-
-        <div class="item item-divider">
-          Saturday
-        </div>
-        <ion-list>
-          <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SATURDAY'">
-            {{routeDeparture.time}}
-          </ion-item>
-        </ion-list>
-
-        <div class="item item-divider">
-          Sunday
-        </div>
-        <ion-list>
-          <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SUNDAY'">
-            {{routeDeparture.time}}
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-view>
-  </ion-tab>
-
-</ion-tabs> -->
-<!-- </ion-view> -->

@@ -6,7 +6,7 @@
         <input type="text" placeholder="Search" ng-model="searchText" ng-change="getRoutes(searchText)">
       </label>
 
-      <ion-item ng-repeat="route in routes" ng-click="goToDetails(route.id, route.longName)">
+      <ion-item ng-repeat="route in routes" ng-click="goToDetails(route)">
         {{route.shortName}}
         -
         {{route.longName}}
