@@ -1,0 +1,10 @@
+<ion-view title="Stops">
+    <ion-content>
+      <ul class="timeline">
+        <li class="timeline-item" ng-repeat="routeStop in routeStops" ng-click="">
+          <div class="timeline-thumb bg-color-blue timeline-icon"></div>
+          <p class="stop-title">{{routeStop.name}}</p>
+        </li>
+      </ul>
+    </ion-content>
+</ion-view>

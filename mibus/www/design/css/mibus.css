@@ -9736,9 +9736,9 @@ a.button {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: #ffb4fe;
-  left: 28px;
+  width: 1px;
+  background: #5b5b5b;
+  left: 29px;
   margin-left: -10px;
   z-index: 1; }
 
@@ -9752,13 +9752,12 @@ a.button {
 .timeline .timeline-thumb.timeline-icon {
   height: 15px;
   text-align: center;
-  background: #cd10d7;
+  background: #373737;
   line-height: 15px; }
 
 .timeline .timeline-item {
   margin-left: 37px;
-  border-bottom: 1px solid #ccc;
-  padding-top: 10px; }
+  padding-top: 20px; }
 
 .timeline .timeline-stats {
   position: relative;
