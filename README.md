@@ -9,13 +9,6 @@ For you to be able to build and run this project you'll need to have installed:
 
 -   [Npm](http://www.npmjs.com/)
 -   [Ionic Framework](http://ionicframework.com/)
--   Node SASS
-
-You can install Node SASS through Npm using the following command:
-
-```
-npm install node-sass
-```
 
 ## The Setup
 
