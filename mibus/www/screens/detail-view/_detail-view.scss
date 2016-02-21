@@ -1,3 +1,18 @@
+.wrapping-grid {
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+}
+
+.departure-block{
+  text-align: center;
+  background: $positive;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  // margin: 2px;
+  color: #fff;
+}
+
 .timeline {
     position: relative;
     // margin: 15px 0 0 0;

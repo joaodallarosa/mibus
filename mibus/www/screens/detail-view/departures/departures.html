@@ -1,39 +1,61 @@
-
 <ion-view title="{{selectedRoute.longName}}">
 
   <ion-nav-buttons side="left">
     <button class="button button-clear header-item" ng-click="goBack()">
       <i class="icon ion-android-arrow-back" ng-if="isAndroid"></i>
-      <i class="icon ion-ios-arrow-back" ng-if="isIOS"> Back</i>
+      <i class="icon ion-ios-arrow-back" ng-if="isIOS">
+        Back</i>
     </button>
   </ion-nav-buttons>
 
-    <ion-content>
+  <ion-content>
+
+    <div class="card">
       <div class="item item-divider">
         Weekdays
       </div>
-      <ion-list>
-        <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'WEEKDAY'">
-          {{routeDeparture.time}}
-        </ion-item>
-      </ion-list>
+      <div class="item item-text-wrap">
+        <div class="row wrapping-grid">
+          <div class="col col-25" ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'WEEKDAY'">
+            <div class="departure-block">
+              {{routeDeparture.time}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="card">
       <div class="item item-divider">
         Saturday
       </div>
-      <ion-list>
-        <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SATURDAY'">
-          {{routeDeparture.time}}
-        </ion-item>
-      </ion-list>
+      <div class="item item-text-wrap">
+        <div class="row wrapping-grid">
+          <div class="col col-25" ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SATURDAY'">
+            <div class="departure-block">
+              {{routeDeparture.time}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    <div class="card">
       <div class="item item-divider">
         Sunday
       </div>
-      <ion-list>
-        <ion-item ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SUNDAY'">
-          {{routeDeparture.time}}
-        </ion-item>
-      </ion-list>
-    </ion-content>
+      <div class="item item-text-wrap">
+        <div class="row wrapping-grid">
+          <div class="col col-25" ng-repeat="routeDeparture in routeDepartures" ng-click="" ng-if="routeDeparture.calendar == 'SUNDAY'">
+            <div class="departure-block">
+              {{routeDeparture.time}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
 </ion-view>

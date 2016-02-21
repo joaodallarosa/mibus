@@ -29,5 +29,4 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
   };
 
 
-
 });

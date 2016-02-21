@@ -1,15 +1,15 @@
 angular.module('mibus').controller("StopsViewController", function($scope, $state, $stateParams, $http, $ionicLoading, routeService) {
 
   $scope.$on('$ionicView.enter', function() {
-    $scope.selectedRoute = routeService.getSelectedRoute();
 
-    $ionicLoading.show({
-      template: "Loading..."
-    });
-
-    $scope.getRouteStops($scope.selectedRoute.id);
+    if ($scope.selectedRoute != routeService.getSelectedRoute()) {
+      $scope.selectedRoute = routeService.getSelectedRoute();
+      $ionicLoading.show({
+        template: "Loading..."
+      });
+      $scope.getRouteStops($scope.selectedRoute.id);
+    }
   });
-
 
   $scope.routeStops = [];
   $scope.routeDepartures = [];
