@@ -22,10 +22,6 @@ Install cordova plugins and add Android/iOS platforms:
 ```
 ionic state restore
 ```
-Generate Icon and Splashscreen resources:
-```
-ionic resources
-```
 Done!
 
 ## Running on Android
@@ -39,3 +35,10 @@ ionic run android
 
 From the project root folder go to "mibus/platforms/ios/". Now you can open "Mibus.xcodeproj" with Xcode and run the app.
 
+
+## Running on the Browser
+
+Execute the following command for running the app in the browser:
+```
+ionic serve
+```
