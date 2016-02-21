@@ -19,37 +19,30 @@ npm install node-sass
 
 ## The Setup
 
-1.  Clone this repository into a folder.
-2.  Run the command 'npm install'
-3.  That's it!
+Clone this repository into a folder.
+
+Install all the required node packages: 
+```
+npm install
+```
+Install cordova plugins and add Android/iOS platforms:
+```
+ionic state restore
+```
+Generate Icon and Splashscreen resources:
+```
+ionic resources
+```
+Done!
 
 ## Running on Android
 
-First add the Android platform.
-
-```
-ionic platform add android
-```
-
-Now you can run the project on a connected Android device or a Emulator by running:
-
+Execute the following command for running the app in a connected Android device or emulator:
 ```
 ionic run android
 ```
 
 ## Running on iPhone
-
-First add the iOS platform.
-
-```
-ionic platform add ios
-```
-
-Now you need to run this command for Ionic to build a Xcode project:
-
-```
-ionic build ios
-```
 
 From the project root folder go to "mibus/platforms/ios/". Now you can open "Mibus.xcodeproj" with Xcode and run the app.
 
