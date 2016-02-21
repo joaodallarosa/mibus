@@ -9795,3 +9795,36 @@ a.button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px; }
+
+.button.map-button {
+  z-index: 999;
+  position: absolute;
+  background: #33cd5f;
+  color: #fff;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5); }
+
+.scroll {
+  height: 100%; }
+
+#map {
+  width: 100%;
+  height: 100%; }
+
+ion-modal-view .title {
+  text-align: center; }
+
+.selected-street-item {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in;
+  -moz-transition: max-height 0.2s ease-in;
+  transition: max-height 0.2s ease-in; }
+  .selected-street-item.animate {
+    max-height: 80px; }

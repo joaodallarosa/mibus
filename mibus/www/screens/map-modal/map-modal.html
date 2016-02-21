@@ -1,0 +1,20 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-balanced">
+    <button class="button button-clear" ng-click="cancelMapSelection()">Cancel</button>
+    <!-- <h1 class="title">Map</h1> -->
+
+  </ion-header-bar>
+  <ion-content>
+    <div class="selected-street-item {{selectedStreet.length>0 ? 'animate':''}}">
+      <ion-item >
+        <p ng-if="selectedStreet.length == 0">Click on a street to select it</p>
+        <p class="positive">{{selectedStreet}}</p>
+        <button ng-if="selectedStreet.length > 0" class="button button-clear button-balanced" ng-click="hasSelectedStreet()">
+          OK</button>
+
+      </ion-item>
+    </div>
+
+    <div id="map" data-tap-disabled="true"></div>
+  </ion-content>
+</ion-modal-view>

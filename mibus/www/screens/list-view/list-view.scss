@@ -1,7 +1,24 @@
-.searching-spinner{
+.searching-spinner {
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+}
+.button {
+  &.map-button {
+    z-index: 999;
+    position: absolute;
+    background: $balanced;
+    color: $light;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+  }
 }
