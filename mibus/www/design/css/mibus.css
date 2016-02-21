@@ -3,6 +3,7 @@
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
 
+
 For example, you might change some of the default colors:
 
 $light:                           #fff !default;
@@ -15,6 +16,20 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+.mibus-color-primary {
+  color: #fff; }
+
+.mibus-color-secondary {
+  color: #0FBAB3; }
+
+ion-nav-bar .bar-mibus {
+  background-color: #0FBAB3;
+  color: #fff; }
+
+.bar .bar-header .bar-mibus {
+  background-color: #0FBAB3 !important;
+  color: #fff !important; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -9737,11 +9752,19 @@ a.button {
 
 .departure-block {
   text-align: center;
-  background: #387ef5;
+  background: #0FBAB3;
   border-radius: 5px;
   height: 30px;
   line-height: 30px;
   color: #fff; }
+
+.tabs-mibus .tabs {
+  background-color: #0FBAB3; }
+
+.tabs-mibus .tab-item {
+  color: #fff; }
+  .tabs-mibus .tab-item.tab-item-active {
+    border-color: #fff; }
 
 .timeline {
   position: relative; }
@@ -9796,10 +9819,15 @@ a.button {
   margin-right: auto;
   margin-top: 10px; }
 
+.mibus-title {
+  width: 80px;
+  height: auto;
+  margin-top: 10px; }
+
 .button.map-button {
   z-index: 999;
   position: absolute;
-  background: #33cd5f;
+  background: #ef473a;
   color: #fff;
   bottom: 0;
   right: 0;
@@ -9820,6 +9848,11 @@ a.button {
 ion-modal-view .title {
   text-align: center; }
 
+.button-ok {
+  color: #0FBAB3;
+  background-color: transparent;
+  border: none; }
+
 .selected-street-item {
   max-height: 0;
   overflow: hidden;
@@ -9828,3 +9861,10 @@ ion-modal-view .title {
   transition: max-height 0.2s ease-in; }
   .selected-street-item.animate {
     max-height: 80px; }
+
+.header-mibus {
+  background: #0FBAB3; }
+  .header-mibus .button {
+    color: #fff; }
+  .header-mibus .title {
+    color: #fff; }

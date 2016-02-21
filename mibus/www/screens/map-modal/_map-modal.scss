@@ -10,6 +10,13 @@ ion-modal-view {
     text-align: center;
   }
 }
+
+.button-ok {
+    color: $mibus-color-secondary;
+    background-color: transparent;
+    border: none;
+}
+
 .selected-street-item {
   max-height: 0;
   overflow: hidden;
@@ -18,5 +25,14 @@ ion-modal-view {
   transition: max-height 0.2s ease-in;
   &.animate {
     max-height: 80px;
+  }
+}
+.header-mibus {
+  background: $mibus-color-secondary;
+  .button {
+    color: $mibus-color-primary;
+  }
+  .title {
+    color: $mibus-color-primary;
   }
 }

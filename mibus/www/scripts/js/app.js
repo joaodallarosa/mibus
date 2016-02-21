@@ -1,13 +1,16 @@
 angular.module('mibus', ['ionic', 'ngCordova'])
-  .run(function($ionicPlatform) {
+  .run(function($ionicPlatform,$cordovaStatusbar) {
     $ionicPlatform.ready(function() {
       if (window.cordova && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         cordova.plugins.Keyboard.disableScroll(true);
       }
-      if (window.StatusBar) {
-        StatusBar.styleDefault();
-      }
+      // if (window.StatusBar) {
+      //   StatusBar.styleDefault();
+      // }
+
+      $cordovaStatusbar.styleHex('#0FBAB3') //red
+
     });
   })
   .config(function($stateProvider, $urlRouterProvider) {

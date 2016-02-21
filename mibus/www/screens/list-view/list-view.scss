@@ -5,12 +5,18 @@
   margin-right: auto;
   margin-top: 10px;
 }
+.mibus-title{
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+}
+
 .button {
   &.map-button {
     z-index: 999;
     position: absolute;
-    background: $balanced;
-    color: $light;
+    background: $assertive;
+    color: $mibus-color-primary;
     bottom: 0;
     right: 0;
     margin-right: 20px;
