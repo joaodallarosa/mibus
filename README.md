@@ -33,7 +33,7 @@ ionic run android
 
 ## Running on iPhone
 
-From the project root folder go to "mibus/platforms/ios/". Now you can open "Mibus.xcodeproj" with Xcode and run the app.
+From the project root folder go to "mibus/platforms/ios/". Now you can open "Mibus.xcodeproj" with Xcode and run the app on a device or emulator.
 
 
 ## Running on the Browser
