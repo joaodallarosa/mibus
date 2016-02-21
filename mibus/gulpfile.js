@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 
@@ -18,7 +18,7 @@ gulp.task('sass', function(done) {
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('./www/design/css/'))
-    .pipe(minifyCss({
+    .pipe(cssnano({
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
