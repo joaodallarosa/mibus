@@ -5,7 +5,7 @@
     <ion-list>
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Type the name of street for searching buses routes" ng-model="searchText" ng-change="getRoutes(searchText)" ng-model-options="{ debounce: 400 }">
+        <input type="text" placeholder="Type the street name here" ng-model="searchData.searchText" ng-change="getRoutes(searchData.searchText)" ng-model-options="{ debounce: 400 }">
       </label>
 
       <ion-spinner class="searching-spinner" ng-if="isSearching"></ion-spinner>

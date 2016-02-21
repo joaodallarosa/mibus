@@ -1,7 +1,7 @@
 angular.module('mibus').controller("ListViewController", function($scope, $state, $stateParams, $http, $ionicLoading, routeService, $ionicModal, $cordovaGeolocation) {
 
   $scope.routes = [];
-  $scope.searchText = '';
+  $scope.searchData = {};
   $scope.isSearching = false;
   $scope.hasLoadedMap = false;
 
@@ -88,7 +88,9 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
           if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
               $scope.selectedStreet = results[0].formatted_address.split(',')[0];
-              $scope.searchText = results[0].formatted_address.split(',')[0];
+              $scope.searchData.searchText = "";
+              $scope.searchData.searchText = results[0].formatted_address.split(',')[0];
+              console.log($scope.searchData.searchText);
               $scope.$apply();
             } else {
               console.log('No results...');
@@ -109,13 +111,13 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
   };
 
   $scope.cancelMapSelection = function() {
-    $scope.searchText = '';
+    $scope.searchData.searchText = '';
     $scope.modal.hide();
   }
 
   $scope.hasSelectedStreet = function() {
+    $scope.getRoutes($scope.searchData.searchText);
     $scope.modal.hide();
-    $scope.getRoutes($scope.searchText);
   }
 
   $scope.$on('$destroy', function() {
