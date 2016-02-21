@@ -1,6 +1,6 @@
 {
   "name": "mibus",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "An app for people within Florianópolis to find bus routes quickly and with joy!",
   "dependencies": {
     "gulp": "^3.5.6",
