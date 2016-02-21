@@ -3,10 +3,15 @@
     <ion-list>
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search" ng-model="searchText" ng-change="getRoutes(searchText)">
+        <input type="text" placeholder="Search" ng-model="searchText" ng-change="getRoutes(searchText)" ng-model-options="{ debounce: 400 }">
       </label>
 
-      <ion-item ng-repeat="route in routes" ng-click="goToDetails(route)">
+      <ion-spinner class="searching-spinner" ng-if="isSearching"></ion-spinner>
+
+
+      <ion-item class="item-icon-left" ng-if="!isSearching" ng-repeat="route in routes" ng-click="goToDetails(route)">
+        <i class="icon ion-android-bus"></i>
+
         {{route.shortName}}
         -
         {{route.longName}}

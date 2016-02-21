@@ -2,18 +2,16 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
 
   $scope.routes = [];
   $scope.searchText = '';
+  $scope.isSearching = false;
 
   $scope.getRoutes = function(routeStop) {
+    $scope.isSearching = true;
     console.log('Route stop:', routeStop);
-
-    $ionicLoading.show({
-      template: "Loading..."
-    });
 
     routeService.searchRoute(routeStop)
       .then(
         function(response) {
-          $ionicLoading.hide();
+          $scope.isSearching = false;
           $scope.routes = response.data['rows'];
         }),
       function(httpError) {
