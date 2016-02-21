@@ -1,0 +1,23 @@
+.wrapping-grid {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.departure-block {
+  text-align: center;
+  background: $mibus-color-secondary;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  color: $mibus-color-primary;
+}
+.tabs-mibus {
+  .tabs {
+    background-color: $mibus-color-secondary;
+  }
+  .tab-item {
+    color: $mibus-color-primary;
+    &.tab-item-active {
+      border-color: $mibus-color-primary;
+    }
+  }
+}

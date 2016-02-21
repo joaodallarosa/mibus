@@ -39,7 +39,6 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
   $scope.openModal = function() {
     $scope.modal.show();
 
-
     if ($scope.map == undefined) {
       $ionicLoading.show({
         template: "Loading..."
@@ -50,7 +49,6 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
       };
 
       $scope.selectedStreet = '';
-
       $cordovaGeolocation.getCurrentPosition(options).then(function(position) {
 
         var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -108,12 +106,8 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
         console.log("Could not get location");
       });
     }
-
-
-
-
-
   };
+
   $scope.closeModal = function() {
     $scope.modal.hide();
   };
@@ -127,6 +121,7 @@ angular.module('mibus').controller("ListViewController", function($scope, $state
     $scope.modal.hide();
     $scope.getRoutes($scope.searchText);
   }
+
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
   });

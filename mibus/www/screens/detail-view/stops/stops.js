@@ -1,7 +1,6 @@
 angular.module('mibus').controller("StopsViewController", function($scope, $state, $stateParams, $http, $ionicLoading, routeService) {
 
   $scope.$on('$ionicView.enter', function() {
-
     if ($scope.selectedRoute != routeService.getSelectedRoute()) {
       $scope.selectedRoute = routeService.getSelectedRoute();
       $ionicLoading.show({
@@ -13,7 +12,6 @@ angular.module('mibus').controller("StopsViewController", function($scope, $stat
 
   $scope.routeStops = [];
   $scope.routeDepartures = [];
-
   $scope.isIOS = ionic.Platform.isIOS();
   $scope.isAndroid = ionic.Platform.isAndroid();
 
