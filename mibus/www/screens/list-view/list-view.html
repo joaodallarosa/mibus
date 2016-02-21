@@ -8,10 +8,8 @@
 
       <ion-spinner class="searching-spinner" ng-if="isSearching"></ion-spinner>
 
-
       <ion-item class="item-icon-left" ng-if="!isSearching" ng-repeat="route in routes" ng-click="goToDetails(route)">
         <i class="icon ion-android-bus"></i>
-
         {{route.shortName}}
         -
         {{route.longName}}
